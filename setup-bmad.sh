@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# BMAD-CLAUDE-CODE Quick Setup Script
-# This script sets up the BMAD Method in your project for use with Claude Code
+# BMAD-CLAUDE-CODE Quick Setup Script (Deprecated)
+# Prefer using `npx bmad-method@latest install --ide=claude-code` for new installs.
+# This script remains for legacy environments.
 
 set -e  # Exit on error
 
@@ -403,19 +404,19 @@ if [[ "$SOURCE_MODE" == "local" ]]; then
     # Copy bmad-agent folder
     if [[ -d "$SCRIPT_DIR/bmad-agent" ]]; then
         cp -r "$SCRIPT_DIR/bmad-agent" .
-        echo -e "  ${CYAN}✔${NC} bmad-agent/ folder copied"
+        echo -e "  ${CYAN}✔${NC} .bmad-core/ folder copied"
     else
-        echo -e "${PURPLE}  ⚠️  bmad-agent/ folder not found in $SCRIPT_DIR${NC}"
+        echo -e "${PURPLE}  ⚠️  .bmad-core/ folder not found in $SCRIPT_DIR${NC}"
     fi
 else
     echo -e "\n${CYAN}▶${NC} ${BRIGHT_ORANGE}Downloading BMAD files from GitHub...${NC}"
     
     # Download bmad-agent folder
-    echo -e "  ${CYAN}◐${NC} Downloading bmad-agent/ folder..."
+    echo -e "  ${CYAN}◐${NC} Downloading .bmad-core/ folder..."
     echo ""
     download_directory "bmad-agent"
     echo ""
-    echo -e "  ${CYAN}✔${NC} bmad-agent/ folder complete"
+    echo -e "  ${CYAN}✔${NC} .bmad-core/ folder complete"
 fi
 
 # Copy or download CLAUDE.md

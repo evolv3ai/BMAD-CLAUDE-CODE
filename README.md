@@ -32,21 +32,15 @@ Here, in this repository, lies our decrepit documentation of the journey - templ
 
 ### Automated Setup (Recommended)
 
-Navigate to the root directory of your project and use the setup script to automatically configure BMAD:
-
-**macOS/Linux/WSL:**
-
-Single command (copy and paste entire block):
+Run the BMAD installer from your project root:
 
 ```bash
-curl -O https://raw.githubusercontent.com/cabinlab/BMAD-CLAUDE-CODE/main/setup-bmad.sh && \
-chmod +x setup-bmad.sh && \
-./setup-bmad.sh
+npx bmad-method@latest install --ide=claude-code
 ```
 
-**Windows Users:** Since Claude Code requires WSL, run the above bash command in your WSL terminal, not PowerShell.
+**Windows Users:** Run the above command in your WSL terminal.
 
-The script will:
+The installer will:
 
 - Copy all necessary BMAD files to your project
 - Create the proper directory structure
@@ -60,7 +54,7 @@ The script will:
 your-project/
 ├── CLAUDE.md                  # Claude Code instructions
 ├── BMAD-CLAUDE-CODE-GUIDE.md  # Quick reference
-├── bmad-agent/                   # BMAD assets
+├── .bmad-core/                   # BMAD assets
 │   ├── checklists/               # Quality checklists
 │   ├── data/                     # Knowledge base
 │   ├── guides/                   # Methodology and usage guides
@@ -119,7 +113,7 @@ npm run dev
 
 1. Clone this repository or download the files
 2. Copy these to your project root:
-   - `bmad-agent/` folder (personas, templates, tasks, checklists, data)
+   - `.bmad-core/` folder (personas, templates, tasks, checklists, data)
    - `CLAUDE.md` or `CLAUDE-ENHANCED.md` (rename to CLAUDE.md)
    - `BMAD-CLAUDE-CODE-GUIDE.md` (optional quick reference)
 3. Create a `docs/` folder in your project for BMAD artifacts
@@ -263,7 +257,7 @@ The BMAD Method is a revolutionary approach that elevates "vibe coding" to advan
 <details>
 <summary><strong>🛠️ Available Resources</strong></summary>
 
-### Templates (`bmad-agent/templates/`) - 10 Total
+### Templates (`.bmad-core/templates/`) - 10 Total
 
 **Core Templates:**
 
@@ -281,7 +275,7 @@ The BMAD Method is a revolutionary approach that elevates "vibe coding" to advan
 - `planning-journal-tmpl.md` - Decision history across sessions
 - `doc-sharding-tmpl.md` - Documentation organization
 
-### Tasks (`bmad-agent/tasks/`) - 19 Total
+### Tasks (`.bmad-core/tasks/`) - 19 Total
 
 **Core Tasks:**
 
@@ -314,7 +308,7 @@ The BMAD Method is a revolutionary approach that elevates "vibe coding" to advan
 - `core-dump.md` - Session memory capture
 - `checklist-run-task.md` - Quality gate execution
 
-### Checklists (`bmad-agent/checklists/`) - 13 Total
+### Checklists (`.bmad-core/checklists/`) - 13 Total
 
 **Product & Requirements:**
 
