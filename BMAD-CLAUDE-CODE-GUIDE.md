@@ -22,7 +22,7 @@ mkdir -p /path/to/your-project/docs
 your-project/
 ├── CLAUDE.md                  # Required for Claude Code
 ├── BMAD-CLAUDE-CODE-GUIDE.md  # This file (for reference)
-├── bmad-agent/                # BMAD templates and assets
+├── .bmad-core/                # BMAD templates and assets
 ├── docs/                      # Where BMAD artifacts go
 └── src/                       # Your implementation code
 ```
@@ -36,47 +36,47 @@ your-project/
 
 ### "Create a Project Brief"
 ```
-Read: bmad-agent/templates/project-brief-tmpl.md
+Read: .bmad-core/templates/project-brief-tmpl.md
 Create: docs/project-brief.md
 Focus on: Vision, goals, constraints, success criteria
 ```
 
 ### "Create a PRD"
 ```
-Read: bmad-agent/templates/prd-tmpl.md
-Read: bmad-agent/tasks/create-prd.md (for detailed instructions)
+Read: .bmad-core/templates/prd-tmpl.md
+Read: .bmad-core/tasks/create-prd.md (for detailed instructions)
 Requires: Completed project brief
 Creates: docs/prd.md with epic breakdown
 ```
 
 ### "Design the Architecture"
 ```
-Read: bmad-agent/templates/architecture-tmpl.md
-Read: bmad-agent/tasks/create-architecture.md
+Read: .bmad-core/templates/architecture-tmpl.md
+Read: .bmad-core/tasks/create-architecture.md
 Input: PRD and technical requirements
 Creates: docs/architecture.md
 ```
 
 ### "Create UI/UX Specifications"
 ```
-Read: bmad-agent/templates/front-end-spec-tmpl.md
-Read: bmad-agent/tasks/create-ui-specification.md
+Read: .bmad-core/templates/front-end-spec-tmpl.md
+Read: .bmad-core/tasks/create-ui-specification.md
 Input: PRD and user requirements
 Creates: docs/ux-ui-spec.md
 ```
 
 ### "Design Frontend Architecture"
 ```
-Read: bmad-agent/templates/front-end-architecture-tmpl.md
-Read: bmad-agent/tasks/create-frontend-architecture.md
+Read: .bmad-core/templates/front-end-architecture-tmpl.md
+Read: .bmad-core/tasks/create-frontend-architecture.md
 Input: PRD, system architecture, UI/UX spec
 Creates: docs/front-end-architecture.md
 ```
 
 ### "Create User Stories"
 ```
-Read: bmad-agent/templates/story-tmpl.md
-Read: bmad-agent/tasks/create-next-story.md
+Read: .bmad-core/templates/story-tmpl.md
+Read: .bmad-core/tasks/create-next-story.md
 Process: Identify next story → Apply template → Run draft checklist
 Creates: docs/stories/story-X-Y.md
 ```
@@ -94,7 +94,7 @@ Creates: docs/stories/story-X-Y.md
 ## 📋 Checklist Execution
 
 ### Running Any Checklist
-1. Read the checklist file from `bmad-agent/checklists/`
+1. Read the checklist file from `.bmad-core/checklists/`
 2. Present each item as a question/validation
 3. Track responses (✓ Pass, ✗ Fail, ⚠️ Needs Review)
 4. Summarize results and required actions
@@ -103,7 +103,7 @@ Creates: docs/stories/story-X-Y.md
 ```
 User: "Run the story draft checklist"
 Claude Code:
-1. Reads bmad-agent/checklists/story-draft-checklist.md
+1. Reads .bmad-core/checklists/story-draft-checklist.md
 2. "Let's review your story. First item: Does the story have a clear user role?"
 3. User: "Yes, it specifies 'As a registered user'"
 4. "✓ Clear user role. Next: Is the desired outcome specific and measurable?"
@@ -145,7 +145,7 @@ Claude Code:
 ### Standard BMAD Project Structure
 ```
 project-root/
-├── bmad-agent/          # Copy from BMAD-METHOD repo
+├── .bmad-core/          # Copy from BMAD-METHOD repo
 │   ├── templates/
 │   ├── tasks/
 │   ├── checklists/

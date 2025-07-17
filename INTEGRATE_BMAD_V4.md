@@ -29,7 +29,7 @@ git checkout -b chore/upgrade-bmad-v4
 
 ## 2  Quarantine Legacy v3 Assets
 
-All v3 BMAD artifacts live under `bmad-agent/` (plus docs). 
+All v3 BMAD artifacts live under `.bmad-core/` (plus docs). 
 
 ```bash
 mv bmad-agent legacy-bmad-v3
@@ -79,10 +79,10 @@ coreProjectLocation:
 
 ## 6  Fix Hard‑Coded Paths
 
-Search & replace `bmad-agent/` → `.bmad-core/`
+Search & replace `.bmad-core/` → `.bmad-core/`
 
 ```bash
-grep -rl "bmad-agent/" . | xargs sed -i '' 's|bmad-agent/|.bmad-core/|g'
+grep -rl ".bmad-core/" . | xargs sed -i '' 's|.bmad-core/|.bmad-core/|g'
 ```
 
 ---
@@ -136,10 +136,10 @@ Open a PR → review → merge → delete `legacy-bmad-v3/` after full migration
 
 | v3 Path                      | v4 Path                      |
 | ---------------------------- | ---------------------------- |
-| `bmad-agent/templates/*.md`  | `.bmad-core/templates/*.md`  |
-| `bmad-agent/tasks/*.md`      | `.bmad-core/tasks/*.md`      |
-| `bmad-agent/checklists/*.md` | `.bmad-core/checklists/*.md` |
-| `bmad-agent/data/bmad-kb.md` | `.bmad-core/data/bmad-kb.md` |
+| `.bmad-core/templates/*.md`  | `.bmad-core/templates/*.md`  |
+| `.bmad-core/tasks/*.md`      | `.bmad-core/tasks/*.md`      |
+| `.bmad-core/checklists/*.md` | `.bmad-core/checklists/*.md` |
+| `.bmad-core/data/bmad-kb.md` | `.bmad-core/data/bmad-kb.md` |
 
 ---
 

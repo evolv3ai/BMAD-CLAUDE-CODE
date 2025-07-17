@@ -64,7 +64,7 @@ Your project structure should look like:
 your-project/
 ├── CLAUDE.md               # This file (required for Claude Code)
 ├── BMAD-CLAUDE-CODE-GUIDE.md  # Quick reference (optional)
-├── bmad-agent/             # BMAD Method assets
+├── .bmad-core/             # BMAD Method assets
 │   ├── templates/
 │   ├── tasks/
 │   ├── checklists/
@@ -79,7 +79,7 @@ The BMAD Method (Breakthrough Method of Agile AI-driven Development) is a framew
 
 ## Using BMAD Method with Claude Code
 
-Claude Code utilizes the BMAD Method by embodying specialized personas that guide you through structured workflows. Each persona provides a different perspective and uses templates from `bmad-agent/` to ensure comprehensive project development.
+Claude Code utilizes the BMAD Method by embodying specialized personas that guide you through structured workflows. Each persona provides a different perspective and uses templates from `.bmad-core/` to ensure comprehensive project development.
 
 ### BMAD Personas for Claude Code
 
@@ -107,33 +107,33 @@ Claude Code utilizes the BMAD Method by embodying specialized personas that guid
 - **Ask for a specific persona** when you need that perspective
 - **Let personas challenge each other** - built-in friction improves thinking
 - **Follow phase gates** - don't skip discovery to jump to implementation
-- **Use templates** from `bmad-agent/templates/` for consistent documentation
-- **Run checklists** from `bmad-agent/checklists/` before phase transitions
+- **Use templates** from `.bmad-core/templates/` for consistent documentation
+- **Run checklists** from `.bmad-core/checklists/` before phase transitions
 
 ## BMAD Method Quick Start
 
 ### Phase 1: Project Definition
 When starting a new project or feature:
-1. Create a Project Brief using `bmad-agent/templates/project-brief-tmpl.md`
-2. Generate a PRD using `bmad-agent/templates/prd-tmpl.md`
-3. Reference `bmad-agent/data/technical-preferences.txt` for technology choices
+1. Create a Project Brief using `.bmad-core/templates/project-brief-tmpl.md`
+2. Generate a PRD using `.bmad-core/templates/prd-tmpl.md`
+3. Reference `.bmad-core/data/technical-preferences.txt` for technology choices
 
 ### Phase 2: Architecture Design
 For technical architecture:
-1. Create architecture document using `bmad-agent/templates/architecture-tmpl.md`
-2. Design frontend architecture with `bmad-agent/templates/front-end-architecture-tmpl.md`
-3. Define UX/UI specifications using `bmad-agent/templates/front-end-spec-tmpl.md`
+1. Create architecture document using `.bmad-core/templates/architecture-tmpl.md`
+2. Design frontend architecture with `.bmad-core/templates/front-end-architecture-tmpl.md`
+3. Define UX/UI specifications using `.bmad-core/templates/front-end-spec-tmpl.md`
 
 ### Phase 3: Story Creation
 For agile story development:
-1. Execute the story creation task from `bmad-agent/tasks/create-next-story.md`
-2. Use `bmad-agent/templates/story-tmpl.md` for consistent story format
-3. Apply `bmad-agent/checklists/story-draft-checklist.md` before approval
+1. Execute the story creation task from `.bmad-core/tasks/create-next-story.md`
+2. Use `.bmad-core/templates/story-tmpl.md` for consistent story format
+3. Apply `.bmad-core/checklists/story-draft-checklist.md` before approval
 
 ### Phase 4: Implementation
 During development:
 1. Follow the story as single source of truth
-2. Apply `bmad-agent/checklists/story-dod-checklist.md` for Definition of Done
+2. Apply `.bmad-core/checklists/story-dod-checklist.md` for Definition of Done
 3. Update story status throughout implementation
 
 ## Common Development Tasks
@@ -143,13 +143,13 @@ Claude Code executes BMAD tasks directly without compilation. Simply reference t
 
 ### Executing BMAD Tasks
 When asked to perform a BMAD task:
-1. Locate the relevant task file in `bmad-agent/tasks/`
+1. Locate the relevant task file in `.bmad-core/tasks/`
 2. Follow the task instructions exactly
 3. Use associated templates and checklists as specified
 
 ### Running Checklists
 To run a checklist:
-1. Read the checklist file from `bmad-agent/checklists/`
+1. Read the checklist file from `.bmad-core/checklists/`
 2. Present each item to the user for validation
 3. Track completion status
 4. Ensure all items pass before proceeding
@@ -158,7 +158,7 @@ To run a checklist:
 
 ### Core Components
 
-1. **Agent System** (`bmad-agent/`)
+1. **Agent System** (`.bmad-core/`)
    - **Personas** (`personas/`): Define individual AI agent personalities and capabilities
    - **Tasks** (`tasks/`): Self-contained instructions for specific operations
    - **Templates** (`templates/`): Document templates for various artifacts (PRDs, architecture docs, stories)

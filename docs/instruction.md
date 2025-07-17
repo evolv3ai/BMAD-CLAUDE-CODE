@@ -4,20 +4,13 @@ This guide provides detailed instructions for using the BMAD Method with Claude 
 
 ## Quick Start
 
-The fastest way to get started is with our setup script:
+The fastest way to get started is with the BMAD installer:
 
-**macOS/Linux:**
 ```bash
-curl -O https://raw.githubusercontent.com/cabinlab/BMAD-CLAUDE-CODE/main/setup-bmad.sh
-chmod +x setup-bmad.sh
-./setup-bmad.sh
+npx bmad-method@latest install --ide=claude-code
 ```
 
-**Windows:**
-```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/cabinlab/BMAD-CLAUDE-CODE/main/setup-bmad.ps1" -OutFile "setup-bmad.ps1"
-.\setup-bmad.ps1
-```
+Run the command in your terminal (use WSL on Windows).
 
 ## Manual Setup
 
@@ -25,7 +18,7 @@ If you prefer manual setup:
 
 1. **Copy BMAD Assets**
    ```bash
-   cp -r bmad-agent/ /path/to/your-project/
+   cp -r .bmad-core/ /path/to/your-project/
    cp CLAUDE.md /path/to/your-project/
    cp BMAD-CLAUDE-CODE-GUIDE.md /path/to/your-project/
    ```
@@ -39,8 +32,8 @@ If you prefer manual setup:
 
 3. **Initialize Planning Journal**
    ```bash
-   cp bmad-agent/templates/planning-journal-tmpl.md docs/bmad-journal.md
-   cp bmad-agent/templates/session-state-tmpl.md docs/.bmad-session/current-state.md
+   cp .bmad-core/templates/planning-journal-tmpl.md docs/bmad-journal.md
+   cp .bmad-core/templates/session-state-tmpl.md docs/.bmad-session/current-state.md
    ```
 
 ## Using BMAD with Claude Code
@@ -190,7 +183,7 @@ A typical BMAD project looks like:
 your-project/
 ├── CLAUDE.md                    # Claude Code instructions
 ├── BMAD-CLAUDE-CODE-GUIDE.md    # Quick reference
-├── bmad-agent/                  # BMAD assets
+├── .bmad-core/                  # BMAD assets
 │   ├── personas/                # Optimized personas
 │   ├── templates/               # Document templates
 │   ├── tasks/                   # Executable tasks

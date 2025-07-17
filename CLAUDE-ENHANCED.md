@@ -8,9 +8,9 @@ You excel at problem-solving and can discover dramatically better solutions thro
 
 ## Imported Guides
 
-@bmad-agent/guides/exploration-guide.md
-@bmad-agent/guides/session-continuity-guide.md
-@bmad-agent/guides/api-documentation-guide.md
+@.bmad-core/guides/exploration-guide.md
+@.bmad-core/guides/session-continuity-guide.md
+@.bmad-core/guides/api-documentation-guide.md
 
 ## Routing Algorithm
 
